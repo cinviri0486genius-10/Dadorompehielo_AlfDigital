@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Dado Tecnológico - Adivina el Artefacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🖥️ El Dado de la Computadora</h1>
+        <p>¡Gira el dado, mira la imagen y ayuda al robot a adivinar qué parte de la computadora es!</p>
+        <div class="marcador-estrellas">⭐ Estrellas ganadas: <span id="contador-estrellas">0</span> / 5</div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sección del Dado Giratorio -->
+        <div class="dice-section">
+            <div id="dado-digital" class="dado-estilo">🖱️</div>
+            <button id="btn-roll" onclick="rollDice()">🎲 ¡Girar Dado Mágico!</button>
+        </div>
+
+        <!-- Panel de Juego: Imagen y Opciones -->
+        <div class="game-panel" id="panel-juego">
+            <div class="panel-title">👀 ¿Qué apareció en el dado?</div>
+            <div class="display-imagen" id="contenedor-imagen">❓</div>
+            <div class="opciones-grid" id="opciones-contenedor">
+                <!-- Los botones aparecerán aquí dinámicamente -->
+            </div>
+            <div id="feedback-juego"></div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Victoria Final -->
+    <div id="modal-victoria" class="modal">
+        <div class="modal-content">
+            <h2>🏆 ¡VICTORIA TOTAL! 🏆</h2>
+            <p>¡Eres un experto en computadoras! Ganaste las 5 estrellas. ⭐⭐⭐⭐⭐</p>
+            <button onclick="reiniciarJuegoCompleto()">🔄 Volver a Jugar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
